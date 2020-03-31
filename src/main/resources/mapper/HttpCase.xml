@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lyntest.mapper.HttpCaseMapper">
+    <resultMap id="httpCaseList" type="com.lyntest.bean.HttpCase">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="creater_name" property="createrName" jdbcType="VARCHAR"/>
+        <result column="creater_code" property="createrCode" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="DATE"/>
+        <result column="updater_name" property="updaterName" jdbcType="VARCHAR"/>
+        <result column="updater_code" property="updaterCode" jdbcType="VARCHAR"/>
+        <result column="update_date" property="updateDate" jdbcType="DATE"/>
+        <result column="system_name" property="systemName" jdbcType="VARCHAR"/>
+        <result column="case_name" property="caseName" jdbcType="VARCHAR"/>
+        <result column="http_type" property="httpType" jdbcType="INTEGER"/>
+        <result column="api_url" property="apiUrl" jdbcType="VARCHAR"/>
+        <result column="api_port" property="apiPort" jdbcType="VARCHAR"/>
+        <result column="api_method" property="apiMethod" jdbcType="VARCHAR"/>
+        <result column="api_path" property="apiPath" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="header_value" property="headerValue" jdbcType="VARCHAR"/>
+        <result column="body_type" property="bodyType" jdbcType="INTEGER"/>
+        <result column="json_value" property="jsonValue" jdbcType="VARCHAR"/>
+        <result column="form_value" property="formValue" jdbcType="VARCHAR"/>
+        <result column="variable_list_value" property="variableListValue" jdbcType="VARCHAR"/>
+        <result column="expected_list_value" property="expectedListValue" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="result" property="result" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectHttpCaseList" resultMap="httpCaseList">
+        select *
+        from apitest_http_case
+        <trim prefix="WHERE" prefixOverrides="and">
+            <if test="caseName != null and caseName != ''">
+                case_name like "%"#{caseName}"%"
+            </if>
+            <if test="systemName != null and systemName != ''">
+                and system_name = #{systemName}
+            </if>
+            <if test="createrCode != null and createrCode != ''">
+                and creater_code = #{createrCode}
+            </if>
+        </trim>
+        order by id desc
+    </select>
+
+    <select id="selectHttpCaseListByIds" resultMap="httpCaseList">
+        select * from apitest_http_case
+        where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="selectHttpCase" resultMap="httpCaseList">
+        select * from apitest_http_case where id = #{id}
+    </select>
+
+    <select id="selectCreaterList" resultMap="httpCaseList">
+        SELECT creater_name,creater_code
+        from apitest_http_case
+        GROUP BY creater_code
+    </select>
+
+    <insert id="createHttpCase" parameterType="com.lyntest.bean.HttpCase">
+        insert apitest_http_case
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            creater_name,creater_code,create_date,case_name,http_type,api_url,api_method,body_type,
+            <if test='systemName != null and systemName != "" '>
+                system_name,
+            </if>
+            <if test='apiPort != null and apiPort != "" '>
+                api_port,
+            </if>
+            <if test='apiPath != null and apiPath != "" '>
+                api_path,
+            </if>
+            <if test='description != null and description != "" '>
+                description,
+            </if>
+            <if test='headerValue != null and headerValue != "" '>
+                header_value,
+            </if>
+            <if test='jsonValue != null and jsonValue != "" '>
+                json_value,
+            </if>
+            <if test='formValue != null and formValue != "" '>
+                form_value,
+            </if>
+            <if test='variableListValue != null and variableListValue != "" '>
+                variable_list_value,
+            </if>
+            <if test='expectedListValue != null and expectedListValue != "" '>
+                expected_list_value,
+            </if>
+            <if test='status != null and status != "" '>
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{createrName},#{createrCode},#{createDate},#{caseName},#{httpType},#{apiUrl},#{apiMethod},#{bodyType},
+            <if test='systemName != null and systemName != "" '>
+                #{systemName},
+            </if>
+            <if test='apiPort != null and apiPort != "" '>
+                #{apiPort},
+            </if>
+            <if test='apiPath != null and apiPath != "" '>
+                #{apiPath},
+            </if>
+            <if test='description != null and description != "" '>
+                #{description},
+            </if>
+            <if test='headerValue != null and headerValue != "" '>
+                #{headerValue},
+            </if>
+            <if test='jsonValue != null and jsonValue != "" '>
+                #{jsonValue},
+            </if>
+            <if test='formValue != null and formValue != "" '>
+                #{formValue},
+            </if>
+            <if test='variableListValue != null and variableListValue != "" '>
+                #{variableListValue},
+            </if>
+            <if test='expectedListValue != null and expectedListValue != "" '>
+                #{expectedListValue},
+            </if>
+            <if test='status != null and status != "" '>
+                #{status},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateHttpCase" parameterType="com.lyntest.bean.HttpCase">
+        update apitest_http_case
+        <trim prefix="SET" suffixOverrides=",">
+            case_name = #{caseName},
+            http_type = #{httpType},
+            api_url = #{apiUrl},
+            api_port = #{apiPort},
+            api_path = #{apiPath},
+            api_method = #{apiMethod},
+            description = #{description},
+            body_type = #{bodyType},
+            result = #{result},
+            json_value = #{jsonValue},
+            expected_list_value = #{expectedListValue},
+            <if test='updaterName != null and updaterName != "" '>
+                updater_name = #{updaterName},
+            </if>
+            <if test='updaterCode != null and updaterCode != "" '>
+                updater_code = #{updaterCode},
+            </if>
+            <if test='updateDate != null'>
+                update_date = #{updateDate},
+            </if>
+            <if test='systemName != null and systemName != "" '>
+                system_name = #{systemName},
+            </if>
+            <if test='headerValue != null and headerValue != "" '>
+                header_value = #{headerValue},
+            </if>
+            <if test='formValue != null and formValue != "" '>
+                form_value = #{formValue},
+            </if>
+            <if test='variableListValue != null and variableListValue != ""'>
+                variable_list_value = #{variableListValue},
+            </if>
+
+            <if test='status != null'>
+                status = #{status},
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteHttpCase">
+        delete from apitest_http_case
+        where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectCollectionApiList" resultMap="httpCaseList">
+      select * from apitest_http_case WHERE id in
+      (SELECT case_id
+      from apitest_collection_api_order
+      WHERE collection_id = #{collectionId})
+    </select>
+
+    <select id="selectCategoryByApiIds" resultType="java.lang.String">
+        SELECT DISTINCT(system_name) from apitest_http_case WHERE id in
+        <foreach collection="apiIds" item="apiId" open="(" separator="," close=")">
+            #{apiId}
+        </foreach>
+    </select>
+
+</mapper>

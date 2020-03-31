@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lyntest.mapper.SqlCaseMapper">
+    <resultMap id="sqlCase" type="com.lyntest.bean.SqlCase">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="creater_name" property="createrName" jdbcType="VARCHAR"/>
+        <result column="creater_code" property="createrCode" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="DATE"/>
+        <result column="case_name" property="caseName" jdbcType="VARCHAR"/>
+        <result column="database_name" property="databaseName" jdbcType="VARCHAR"/>
+        <result column="database_id" property="databaseId" jdbcType="INTEGER"/>
+        <result column="sql" property="sql" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="variable_list_value" property="variableListValue" jdbcType="VARCHAR"/>
+        <result column="result" property="result" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectSqlCaseList" resultMap="sqlCase">
+        select s.*,c.db_name database_name
+        from apitest_sql_case s
+        left join apitest_database_config c on s.database_id = c.id
+        <trim prefix="WHERE" prefixOverrides="and">
+            <if test="caseName != null and caseName != ''">
+                case_name like "%"#{caseName}"%"
+            </if>
+            <if test="databaseId != null and databaseId != ''">
+                and database_id = #{databaseId}
+            </if>
+            <if test="createrCode != null and createrCode != ''">
+                and creater_code = #{createrCode}
+            </if>
+        </trim>
+        order by id desc
+    </select>
+
+    <select id="selectSqlCase" resultMap="sqlCase">
+        select s.*,c.db_name database_name
+        from apitest_sql_case s
+        left join apitest_database_config c on s.database_id = c.id
+        where  s.id = #{id}
+    </select>
+
+    <select id="selectCreaterList" resultMap="sqlCase">
+        SELECT creater_name,creater_code
+        from apitest_sql_case
+        GROUP BY creater_code
+    </select>
+
+    <insert id="createSqlCase" parameterType="com.lyntest.bean.SqlCase">
+        insert apitest_sql_case
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            creater_name,creater_code,create_date,case_name,database_id,`sql`,
+            <if test='description != null and description != "" '>
+                description,
+            </if>
+            <if test='variableListValue != null and variableListValue != "" '>
+                variable_list_value,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{createrName},#{createrCode},#{createDate},#{caseName},#{databaseId},#{sql},
+            <if test='description != null and description != "" '>
+                #{description},
+            </if>
+            <if test='variableListValue != null and variableListValue != "" '>
+                #{variableListValue},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateSqlCase" parameterType="com.lyntest.bean.SqlCase">
+        update apitest_sql_case
+        <trim prefix="SET" suffixOverrides=",">
+            case_name = #{caseName},
+            database_id = #{databaseId},
+            <if test='sql != null and sql != "" '>
+                `sql` = #{sql},
+            </if>
+            <if test='description != null and description != "" '>
+                description = #{description},
+            </if>
+            <if test='variableListValue != null and variableListValue != ""'>
+                variable_list_value = #{variableListValue},
+            </if>
+            <if test='result != null and result != ""'>
+                result = #{result}
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteSqlCase" parameterType="Integer">
+        delete from apitest_sql_case
+        where id=#{id}
+    </delete>
+
+</mapper>

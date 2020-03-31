@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lyntest.mapper.CollectionCaseManageMapper">
+    <resultMap id="collectionCaseList" type="com.lyntest.bean.CommonCase">
+        <result column="collection_id" property="collectionId" jdbcType="INTEGER"/>
+        <result column="case_id" property="caseId" jdbcType="INTEGER"/>
+        <result column="case_name" property="caseName" jdbcType="VARCHAR"/>
+        <result column="case_type" property="caseType" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="selectCommonCase" resultMap="collectionCaseList">
+        SELECT case_id id,collection_id,case_id,case_name,case_type
+        from apitest_collection_api_order
+        WHERE collection_id = #{collectionId}
+    </select>
+
+    <delete id="deleteAllCase">
+        delete from apitest_collection_api_order
+        where collection_id = #{collectionId}
+    </delete>
+
+    <insert id="insertCaseToCollection" parameterType="com.lyntest.bean.CollectionCaseList">
+        insert into apitest_collection_api_order (collection_id, case_id, case_name, case_type) values
+        <foreach collection="caseList" item="case"  separator=",">
+            (#{collectionId},#{case.id},#{case.caseName},#{case.caseType})
+        </foreach>
+    </insert>
+
+    <delete id="deleteOneCase">
+      delete from apitest_collection_api_order
+        where collection_id = #{collectionId}
+        and case_id = #{caseId}
+    </delete>
+
+</mapper>
