@@ -4,7 +4,9 @@ Springboot 版本 1.5.3
 
 Vue 版本 2.9.6
 
-数据平台功能介绍[查看这里](https://blog.csdn.net/lt326030434/article/details/102601308)
+LynTest功能介绍[查看这里](https://blog.csdn.net/lt326030434/article/details/102601308)
+
+线上体验地址 [查看这里](http://106.54.183.225:8080/vue/dist/#/login)
 
 
 - 使用方式
