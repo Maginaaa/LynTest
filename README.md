@@ -7,6 +7,7 @@ Vue 版本 2.9.6
 LynTest功能介绍[查看这里](https://blog.csdn.net/lt326030434/article/details/102601308)
 
 线上体验地址 [查看这里](http://106.54.183.225:8080/vue/dist/#/login)
+账号 admin 密码123456
 
 
 - 使用方式
