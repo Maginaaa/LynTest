@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lyntest.mapper.DubboCaseMapper">
+    <resultMap id="DubboCase" type="com.lyntest.bean.DubboCase">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="creater_name" property="createrName" jdbcType="VARCHAR"/>
+        <result column="creater_code" property="createrCode" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="DATE"/>
+        <result column="updater_name" property="updaterName" jdbcType="VARCHAR"/>
+        <result column="updater_code" property="updaterCode" jdbcType="VARCHAR"/>
+        <result column="update_date" property="updateDate" jdbcType="DATE"/>
+        <result column="system_name" property="systemName" jdbcType="VARCHAR"/>
+        <result column="case_name" property="caseName" jdbcType="VARCHAR"/>
+        <result column="api_name" property="apiName" jdbcType="VARCHAR"/>
+        <result column="zk_address" property="zkAddress" jdbcType="VARCHAR"/>
+        <result column="service_name" property="serviceName" jdbcType="VARCHAR"/>
+        <result column="group_name" property="groupName" jdbcType="VARCHAR"/>
+        <result column="version" property="version" jdbcType="VARCHAR"/>
+        <result column="params" property="params" jdbcType="VARCHAR"/>
+        <result column="function_name" property="functionName" jdbcType="VARCHAR"/>
+        <result column="class_name" property="className" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="variable_list_value" property="variableListValue" jdbcType="VARCHAR"/>
+        <result column="expected_list_value" property="expectedListValue" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="result" property="result" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectDubboCaseList" resultMap="DubboCase">
+        SELECT *
+        FROM apitest_dubbo_case
+        <trim prefix="WHERE" prefixOverrides="and">
+            <if test="caseName != null and caseName != ''">
+                case_name like "%"#{caseName}"%"
+            </if>
+            <if test="systemName != null and systemName != ''">
+                and system_name = #{systemName}
+            </if>
+            <if test="createrCode != null and createrCode != ''">
+                and creater_code = #{createrCode}
+            </if>
+        </trim>
+        ORDER BY id DESC
+    </select>
+
+    <select id="selectDubboCaseListByIds" resultMap="DubboCase">
+        select * from apitest_dubbo_case
+        where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="selectDubboCase" resultMap="DubboCase">
+        select * from apitest_dubbo_case where id = #{id}
+    </select>
+
+    <select id="selectCreaterList" resultMap="DubboCase">
+        SELECT creater_name,creater_code
+        from apitest_dubbo_case
+        GROUP BY creater_code
+    </select>
+
+    <insert id="createDubboCase" parameterType="com.lyntest.bean.DubboCase">
+        insert apitest_dubbo_case
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            creater_name,creater_code,create_date,case_name,api_name,zk_address,service_name,group_name,
+            version,function_name,class_name,status,
+            <if test='systemName != null and systemName != "" '>
+                system_name,
+            </if>
+            <if test='params != null and params != "" '>
+                params,
+            </if>
+            <if test='description != null and description != "" '>
+                description,
+            </if>
+            <if test='variableListValue != null and variableListValue != "" '>
+                variable_list_value,
+            </if>
+            <if test='expectedListValue != null and expectedListValue != "" '>
+                expected_list_value,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{createrName},#{createrCode},#{createDate},#{caseName},#{apiName},#{zkAddress},#{serviceName},#{groupName},
+            #{version},#{functionName},#{className},#{status},
+            <if test='systemName != null and systemName != "" '>
+                #{systemName},
+            </if>
+            <if test='params != null and params != "" '>
+                #{params},
+            </if>
+            <if test='description != null and description != "" '>
+                #{description},
+            </if>
+            <if test='variableListValue != null and variableListValue != "" '>
+                #{variableListValue},
+            </if>
+            <if test='expectedListValue != null and expectedListValue != "" '>
+                #{expectedListValue},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateDubboCase" parameterType="com.lyntest.bean.DubboCase">
+        update apitest_dubbo_case
+        <trim prefix="SET" suffixOverrides=",">
+            case_name = #{caseName},
+            api_name = #{apiName},
+            zk_address = #{zkAddress},
+            service_name = #{serviceName},
+            group_name = #{groupName},
+            version = #{version},
+            function_name = #{functionName},
+            class_name = #{className},
+            status = #{status},
+            <if test='updaterName != null and updaterName != "" '>
+                updater_name = #{updaterName},
+            </if>
+            <if test='updaterCode != null and updaterCode != "" '>
+                updater_code = #{updaterCode},
+            </if>
+            <if test='updateDate != null'>
+                update_date = #{updateDate},
+            </if>
+            <if test='systemName != null and systemName != "" '>
+                system_name = #{systemName},
+            </if>
+            <if test='params != null and params != "" '>
+                params = #{params},
+            </if>
+            <if test='description != null and description != "" '>
+                description = #{description},
+            </if>
+            <if test='variableListValue != null and variableListValue != ""'>
+                variable_list_value = #{variableListValue},
+            </if>
+            <if test='expectedListValue != null and expectedListValue != "" '>
+                expected_list_value = #{expectedListValue},
+            </if>
+            <if test='result != null'>
+                result = #{result},
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteDubboCase">
+        delete from apitest_dubbo_case
+        where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+
+
+</mapper>

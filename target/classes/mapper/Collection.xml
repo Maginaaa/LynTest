@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lyntest.mapper.ApiTestCollectionMapper">
+    <resultMap id="collectionDetail" type="com.lyntest.bean.CollectionDetail">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="collection_name" property="collectionName" jdbcType="VARCHAR"/>
+        <result column="wx_push" property="wxPush" jdbcType="TINYINT"/>
+        <result column="creater_name" property="createrName" jdbcType="VARCHAR"/>
+        <result column="creater_code" property="createrCode" jdbcType="VARCHAR"/>
+        <result column="excuter_name" property="excuterName" jdbcType="VARCHAR"/>
+        <result column="excuter_code" property="excuterCode" jdbcType="VARCHAR"/>
+        <result column="excute_datetime" property="excuteDatetime" jdbcType="TIMESTAMP"/>
+        <result column="report_path" property="reportPath" jdbcType="VARCHAR"/>
+        <result column="thread_pool_size" property="threadPoolSize" jdbcType="INTEGER"/>
+        <result column="repeat_times" property="repeatTimes" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap id="collectionFocus" type="com.lyntest.bean.CollectionFocus">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="collection_id" property="collectionId" jdbcType="INTEGER"/>
+        <result column="user_code" property="userCode" jdbcType="VARCHAR"/>
+        <result column="focus_date" property="focusDate" jdbcType="DATE"/>
+    </resultMap>
+
+    <resultMap id="variable" type="com.lyntest.bean.Variable">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="collection_id" property="collectionId" jdbcType="INTEGER"/>
+        <result column="variable_name" property="variableName" jdbcType="VARCHAR"/>
+        <result column="variable_value" property="variableValue" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectFocusCollectionList" resultMap="collectionDetail">
+        SELECT l.id,l.collection_name,l.excute_datetime
+        from apitest_collection l
+        inner join apitest_collection_focus f
+        on l.id = f.collection_id
+        WHERE f.user_code = #{userCode}
+        ORDER BY l.excute_datetime desc
+    </select>
+
+    <select id="selectCollectionList" resultMap="collectionDetail">
+        select id,collection_name,excute_datetime
+        from apitest_collection
+        <trim prefix="WHERE" prefixOverrides="and">
+            <if test="collectionName != null and collectionName != ''">
+                collection_name like "%"#{collectionName}"%"
+            </if>
+            <if test="createrCode != null and createrCode != ''">
+                and creater_code = #{createrCode}
+            </if>
+        </trim>
+        order by id desc
+    </select>
+
+    <select id="selectCollectionCreaterList" resultMap="collectionDetail">
+        SELECT creater_name,creater_code
+        from apitest_collection
+        GROUP BY creater_code
+    </select>
+
+    <insert id="insertNewCollection" parameterType="com.lyntest.bean.CollectionDetail" useGeneratedKeys="true" keyProperty="id">
+        insert apitest_collection
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            collection_name,creater_name,creater_code
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{collectionName},#{createrName}, #{createrCode}
+        </trim>
+    </insert>
+
+    <select id="selectCollectionDetail" resultMap="collectionDetail">
+        select * from apitest_collection
+        where id = #{collectionId}
+    </select>
+
+    <select id="selectCollectionFocusType" resultType="java.lang.Boolean">
+        <![CDATA[select count(id)
+        from apitest_collection_focus
+        where collection_id=#{collectionId} and user_code = #{userCode}]]>
+    </select>
+
+    <insert id="insertCollectionFocus" parameterType="com.lyntest.bean.CollectionFocus">
+        insert apitest_collection_focus
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            collection_id,user_code,focus_date
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{collectionId},#{userCode}, #{focusDate}
+        </trim>
+    </insert>
+
+    <delete id="deleteCollectionFocus" parameterType="com.lyntest.bean.CollectionFocus">
+        delete from apitest_collection_focus
+        where collection_id = #{collectionId} and user_code = #{userCode}
+    </delete>
+
+    <select id="selectCollectionVariable" resultMap="variable">
+        select *
+        from apitest_collection_variable
+        where collection_id = #{collectionId}
+    </select>
+
+    <insert id="insertCollectionVariable" parameterType="com.lyntest.bean.Variable">
+        insert apitest_collection_variable
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            collection_id,variable_name,
+            <if test='variableValue != null and variableValue != "" '>
+                variable_value,
+            </if>
+            <if test='description != null and description != "" '>
+                description,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{collectionId},#{variableName},
+            <if test='variableValue != null and variableValue != "" '>
+                #{variableValue},
+            </if>
+            <if test='description != null and description != "" '>
+                #{description},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateCollectionVariable" parameterType="com.lyntest.bean.Variable">
+        update apitest_collection_variable
+        <trim prefix="SET" suffixOverrides=",">
+            variable_name=#{variableName},
+            variable_value=#{variableValue},
+            description=#{description}
+        </trim>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteCollectionVariable" parameterType="com.lyntest.bean.Variable">
+        delete from apitest_collection_variable
+        where id=#{id}
+    </delete>
+
+    <update id="updateCollection" parameterType="com.lyntest.bean.CollectionDetail">
+        update apitest_collection
+        <trim prefix="SET" suffixOverrides=",">
+            wx_push = #{wxPush},
+            thread_pool_size=#{threadPoolSize},
+            repeat_times=#{repeatTimes},
+            <if test='collectionName != null and collectionName != "" '>
+                collection_name = #{collectionName},
+            </if>
+            <if test='excuterCode != null and excuterCode != ""'>
+                excuter_name=#{excuterName},excuter_code=#{excuterCode},excute_datetime=#{excuteDatetime},
+            </if>
+            <if test='reportPath != null and reportPath != "" '>
+                report_path = #{reportPath},
+            </if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCollection">
+        delete from apitest_collection
+        where id =#{collectionId}
+    </delete>
+
+    <select id="selectCollectionCategory" resultType="java.lang.String">
+      select DISTINCT(a.system_name)
+      from apitest_http_case a
+      inner join apitest_collection_api_order b
+      on a.id = b.api_id
+      WHERE b.collection_id = #{collectionId}
+    </select>
+
+    <insert id="insertExcuteRecords" parameterType="com.lyntest.bean.CollectionDetail">
+        insert apitest_collection_excute_records
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            collection_id,excuter_name,excuter_code,excute_datetime
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{id},#{excuterName}, #{excuterCode},#{excuteDatetime}
+        </trim>
+    </insert>
+
+    <select id="selectExcuteRecords" resultMap="collectionDetail">
+        SELECT c.collection_name , r.excuter_name, r.excuter_code, r.excute_datetime
+        from apitest_collection_excute_records r
+        left join apitest_collection c on r.collection_id = c.id
+        <trim prefix="WHERE" prefixOverrides="and">
+            <if test="startDate != null">
+                r.excute_datetime <![CDATA[ >= ]]> #{startDate}
+            </if>
+            <if test="endDate != null">
+                and r.excute_datetime <![CDATA[ <= ]]> #{endDate}
+            </if>
+        </trim>
+        order by excute_datetime desc
+    </select>
+
+</mapper>

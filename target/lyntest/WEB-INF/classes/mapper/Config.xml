@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lyntest.mapper.ApiTestConfigMapper">
+    <resultMap id="variable" type="com.lyntest.bean.Variable">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="variable_name" property="variableName" jdbcType="VARCHAR"/>
+        <result column="variable_value" property="variableValue" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="category" type="com.lyntest.bean.Category">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="category_name" property="categoryName" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="database" type="com.lyntest.bean.DataBase">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="db_name" property="dbName" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="database_type" property="databaseType" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="selectGlobalVariable" resultMap="variable">
+        select * from apitest_global_variable
+    </select>
+
+    <insert id="createGlobalVariable" parameterType="com.lyntest.bean.Variable">
+        insert apitest_global_variable
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            variable_name,
+            <if test='variableValue != null and variableValue != "" '>
+                variable_value,
+            </if>
+            <if test='description != null and description != "" '>
+                description
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{variableName},
+            <if test='variableValue != null and variableValue != "" '>
+                #{variableValue},
+            </if>
+            <if test='description != null and description != "" '>
+                #{description},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateGlobalVariable" parameterType="com.lyntest.bean.Variable">
+        update apitest_global_variable
+        set variable_name=#{variableName},variable_value=#{variableValue},description=#{description}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteGlobalVariable">
+        delete from apitest_global_variable
+        where id = #{id}
+    </delete>
+
+    <select id="selectAllCategory" resultMap="category">
+        select *
+        from apitest_category
+    </select>
+
+    <insert id="createCategory" parameterType="com.lyntest.bean.Category">
+        insert apitest_category
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            category_name,
+            <if test='description != null and description != "" '>
+                description
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{categoryName},
+            <if test='description != null and description != "" '>
+                #{description},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateCategory" parameterType="com.lyntest.bean.Category">
+        update apitest_category
+        set category_name=#{categoryName},description=#{description}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteCategory">
+        delete from apitest_category
+        where id = #{id}
+    </delete>
+
+    <select id="selectDataBaseList" resultMap="database">
+        select *
+        from apitest_database_config
+    </select>
+
+    <insert id="createDataBase" parameterType="com.lyntest.bean.DataBase">
+        insert apitest_database_config
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            db_name, url, username, password, database_type,
+            <if test='description != null and description != "" '>
+                description
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #{dbName}, #{url}, #{username}, #{password}, #{databaseType},
+            <if test='description != null and description != "" '>
+                #{description},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateDataBase" parameterType="com.lyntest.bean.DataBase">
+        update apitest_database_config
+        set db_name=#{dbName},url=#{url},username=#{username},password=#{password},
+        database_type=#{databaseType},description=#{description}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteDataBase">
+        delete from apitest_database_config
+        where id = #{id}
+    </delete>
+
+    <select id="selectDataBaseById" resultMap="database">
+        select *
+        from apitest_database_config
+        where id=#{id}
+    </select>
+</mapper>

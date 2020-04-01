@@ -9,8 +9,8 @@ Vue 版本 2.9.6
 
 - 使用方式
 
-目前已经将vue项目打成静态文件放入了Springboot中，所以按一下操作方式可以直接在本地启用项目
-
 1. 启动数据库，执行sql文件内的dataplatform.sql文件，建立数据库所依赖的表
-2. 修改application.yml中对应的数据库信息
-3. 本地启动SpringBoot，然后访问 http://localhost:8070/dist/index.html/#/login, 预设的测试账号为admin,密码123456
+2. 修改application.yml中对应的数据库信息，本地启动SpringBoot
+3. 访问代码中提供的prefile/dist/index.html,在地址中加入/login后缀即可(例如:path/lyntest/prefile/dist/index.html#/index)
+
+如需部署至服务器使用，请微信联系: x59401x

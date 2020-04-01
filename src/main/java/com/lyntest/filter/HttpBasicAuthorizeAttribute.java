@@ -34,7 +34,7 @@ public class HttpBasicAuthorizeAttribute implements Filter {
     private static ThreadLocal<User> userThreadLocal = new ThreadLocal();
 
     private static final Set<String> ALLOWED_PATHS = Collections.unmodifiableSet(
-            new HashSet<>(Arrays.asList("/login", "/registered","/dist")));
+            new HashSet<>(Arrays.asList("/login", "/registered","/category")));
 
     @Override
     public void destroy() {
