@@ -49,8 +49,13 @@ Case管理
 2. 安装依赖包: `cd lyntest/lyntest-vue && npm install`  
 3. 运行项目： `npm run serve`
 
+#### 后续功能：
+1. 测试用例管理平台
+2. 测试用例用自动化测试的打通
+3. 测试用例集成xmind
 
 #### 帮助文档
 使用文档和代码解读会后续在[《简单随风的CSDN博客》](https://jiandansuifeng.blog.csdn.net/)上进行陆续更新。
 更多问题欢迎直接微信联系
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201225163715553.png)
