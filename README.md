@@ -42,7 +42,7 @@ Case管理
 **后端**：
 1. 数据库初始化：启动MySQL数据库，执行根目录下的`lyntest.sql`文件
 2. 更改`lyntest/lyntest-server/src/main/resources/application-dev.yml` 内的配置文件
-3. 'mvn install'
+3. `mvn install`
 4. 直接启动SpringBoot
 
 **前端**：
