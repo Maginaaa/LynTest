@@ -1,0 +1,1 @@
+2020-12-25 10:27:58.061 [http-nio-5001-exec-9] "GET /favicon.ico HTTP/1.1" WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /favicon.ico

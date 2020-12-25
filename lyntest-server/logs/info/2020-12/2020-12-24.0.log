@@ -1,0 +1,534 @@
+2020-12-24 14:31:13.576 [main] "  " INFO  com.lyn.Application - Starting Application on LyndeMacBook-Pro-2.local with PID 1596 (/Users/lyn/Desktop/mmdz_ceshi/lyntest-server/target/classes started by lyn in /Users/lyn/Desktop/mmdz_ceshi/lyntest-server)
+2020-12-24 14:31:13.579 [main] "  " INFO  com.lyn.Application - The following profiles are active: dev
+2020-12-24 14:31:14.584 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-24 14:31:14.591 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-24 14:31:14.661 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42ms. Found 0 Redis repository interfaces.
+2020-12-24 14:31:15.143 [main] "  " INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'commonConfiguration' of type [com.lyn.common.configuration.CommonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-24 14:31:15.412 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5001 (http)
+2020-12-24 14:31:15.422 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5001"]
+2020-12-24 14:31:15.423 [main] "  " INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-24 14:31:15.423 [main] "  " INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-12-24 14:31:15.506 [main] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-24 14:31:15.516 [main] "  " INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1810 ms
+2020-12-24 14:31:16.738 [main] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 14:31:19.938 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-24 14:31:21.097 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-24 14:31:24.489 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5001"]
+2020-12-24 14:31:24.539 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 5001 (http) with context path ''
+2020-12-24 14:31:24.543 [main] "  " INFO  com.lyn.Application - Started Application in 11.666 seconds (JVM running for 12.406)
+2020-12-24 14:46:02.472 [http-nio-5001-exec-2] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-24 14:46:02.475 [http-nio-5001-exec-2] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-24 14:46:02.557 [http-nio-5001-exec-2] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 82 ms
+2020-12-24 14:46:02.663 [http-nio-5001-exec-2] "OPTIONS /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/category/list] from: 127.0.0.1 costs: 42ms
+2020-12-24 14:46:02.663 [http-nio-5001-exec-3] "OPTIONS /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/creator] from: 127.0.0.1 costs: 42ms
+2020-12-24 14:46:02.663 [http-nio-5001-exec-1] "OPTIONS /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/list] from: 127.0.0.1 costs: 42ms
+2020-12-24 14:46:03.760 [http-nio-5001-exec-5] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 1064ms
+2020-12-24 14:46:03.760 [http-nio-5001-exec-4] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 1064ms
+2020-12-24 14:46:04.459 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 1763ms
+2020-12-24 14:46:07.377 [http-nio-5001-exec-7] "OPTIONS /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/list] from: 127.0.0.1 costs: 1ms
+2020-12-24 14:46:07.672 [http-nio-5001-exec-8] "POST /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/list] from: 127.0.0.1 costs: 291ms
+2020-12-24 14:46:11.662 [http-nio-5001-exec-9] "OPTIONS /autotest/collection/report/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/list] from: 127.0.0.1 costs: 0ms
+2020-12-24 14:46:12.447 [http-nio-5001-exec-10] "POST /autotest/collection/report/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/report/list] from: 127.0.0.1 costs: 781ms
+2020-12-24 14:46:16.104 [http-nio-5001-exec-2] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 83ms
+2020-12-24 14:46:17.247 [http-nio-5001-exec-3] "OPTIONS /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/variable/list] from: 127.0.0.1 costs: 0ms
+2020-12-24 14:46:17.400 [http-nio-5001-exec-1] "POST /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/list] from: 127.0.0.1 costs: 149ms
+2020-12-24 15:12:05.778 [http-nio-5001-exec-7] "OPTIONS /track/project/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/track/project/list] from: 127.0.0.1 costs: 10ms
+2020-12-24 15:12:06.693 [http-nio-5001-exec-8] "POST /track/project/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/track/project/list] from: 127.0.0.1 costs: 884ms
+2020-12-24 15:12:08.187 [http-nio-5001-exec-9] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 93ms
+2020-12-24 15:12:08.296 [http-nio-5001-exec-10] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 201ms
+2020-12-24 15:12:08.350 [http-nio-5001-exec-2] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 255ms
+2020-12-24 15:14:51.850 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 338ms
+2020-12-24 15:14:59.948 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 369ms
+2020-12-24 15:15:03.764 [http-nio-5001-exec-7] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 269ms
+2020-12-24 15:15:06.525 [http-nio-5001-exec-8] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 265ms
+2020-12-24 15:15:09.360 [http-nio-5001-exec-9] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 277ms
+2020-12-24 15:15:10.842 [http-nio-5001-exec-10] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 255ms
+2020-12-24 15:15:13.550 [http-nio-5001-exec-2] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 210ms
+2020-12-24 15:15:16.739 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 268ms
+2020-12-24 15:15:21.867 [http-nio-5001-exec-1] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 308ms
+2020-12-24 15:15:31.768 [http-nio-5001-exec-3] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 94ms
+2020-12-24 15:15:40.339 [http-nio-5001-exec-5] "OPTIONS /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/execute] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:15:40.831 [http-nio-5001-exec-6] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"password":"123456","userName":"abc223344"}
+2020-12-24 15:15:41.246 [http-nio-5001-exec-6] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 900ms
+2020-12-24 15:15:43.310 [http-nio-5001-exec-7] "OPTIONS /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/update] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:15:58.687 [http-nio-5001-exec-9] "OPTIONS /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user/login] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:15:59.253 [http-nio-5001-exec-10] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 561ms
+2020-12-24 15:15:59.259 [http-nio-5001-exec-2] "OPTIONS /cms/user/permissions HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user/permissions] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:15:59.544 [http-nio-5001-exec-4] "GET /cms/user/permissions HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/cms/user/permissions] from: 127.0.0.1 costs: 196ms
+2020-12-24 15:16:00.020 [http-nio-5001-exec-1] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 45ms
+2020-12-24 15:16:00.170 [http-nio-5001-exec-3] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 193ms
+2020-12-24 15:16:00.191 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 214ms
+2020-12-24 15:16:48.088 [http-nio-5001-exec-6] "OPTIONS /cms/file HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/file] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:16:49.072 [http-nio-5001-exec-7] "POST /cms/file HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/file] from: 127.0.0.1 costs: 810ms
+2020-12-24 15:16:49.084 [http-nio-5001-exec-8] "OPTIONS /cms/user HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user] from: 127.0.0.1 costs: 1ms
+2020-12-24 15:16:49.470 [http-nio-5001-exec-9] "PUT /cms/user HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [PUT] -> [/cms/user] from: 127.0.0.1 costs: 301ms
+2020-12-24 15:16:49.495 [http-nio-5001-exec-10] "OPTIONS /cms/user/information HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user/information] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:16:49.626 [http-nio-5001-exec-2] "GET /cms/user/information HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/cms/user/information] from: 127.0.0.1 costs: 50ms
+2020-12-24 15:28:21.989 [http-nio-5001-exec-5] "POST /cms/file HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/file] from: 127.0.0.1 costs: 71ms
+2020-12-24 15:28:22.269 [http-nio-5001-exec-6] "PUT /cms/user HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [PUT] -> [/cms/user] from: 127.0.0.1 costs: 224ms
+2020-12-24 15:28:22.389 [http-nio-5001-exec-7] "GET /cms/user/information HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/cms/user/information] from: 127.0.0.1 costs: 47ms
+2020-12-24 15:32:57.783 [SpringContextShutdownHook] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:32:57.787 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-24 15:32:57.797 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-12-24 15:33:08.188 [main] "  " INFO  com.lyn.Application - Starting Application on LyndeMacBook-Pro-2.local with PID 1999 (/Users/lyn/Desktop/mmdz_ceshi/lyntest-server/target/classes started by lyn in /Users/lyn/Desktop/mmdz_ceshi/lyntest-server)
+2020-12-24 15:33:08.191 [main] "  " INFO  com.lyn.Application - The following profiles are active: dev
+2020-12-24 15:33:09.016 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-24 15:33:09.018 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-24 15:33:09.057 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28ms. Found 0 Redis repository interfaces.
+2020-12-24 15:33:09.399 [main] "  " INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'commonConfiguration' of type [com.lyn.common.configuration.CommonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-24 15:33:09.578 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5001 (http)
+2020-12-24 15:33:09.583 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:33:09.584 [main] "  " INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-24 15:33:09.584 [main] "  " INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-12-24 15:33:09.642 [main] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-24 15:33:09.643 [main] "  " INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1345 ms
+2020-12-24 15:33:10.464 [main] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:33:11.882 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-24 15:33:12.330 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-24 15:33:12.862 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:33:12.900 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 5001 (http) with context path ''
+2020-12-24 15:33:12.903 [main] "  " INFO  com.lyn.Application - Started Application in 5.203 seconds (JVM running for 5.858)
+2020-12-24 15:33:44.251 [http-nio-5001-exec-1] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-24 15:33:44.253 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-24 15:33:44.304 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 51 ms
+2020-12-24 15:33:46.342 [http-nio-5001-exec-1] "POST /cms/file HTTP/1.1" INFO  com.lyn.extension.file.QiniuUploader - {ResponseInfo:com.qiniu.http.Response@11c0e286,status:200, reqId:LrcAAABvdAy8llMW, xlog:X-Log, xvia:, adress:upload.qiniup.com/115.238.101.34:443, duration:0.000000 s, error:null}
+2020-12-24 15:33:46.388 [http-nio-5001-exec-1] "POST /cms/file HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/file] from: 127.0.0.1 costs: 1860ms
+2020-12-24 15:33:46.756 [http-nio-5001-exec-2] "PUT /cms/user HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [PUT] -> [/cms/user] from: 127.0.0.1 costs: 285ms
+2020-12-24 15:33:46.868 [http-nio-5001-exec-3] "GET /cms/user/information HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/cms/user/information] from: 127.0.0.1 costs: 49ms
+2020-12-24 15:34:04.741 [http-nio-5001-exec-5] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 238ms
+2020-12-24 15:34:04.752 [http-nio-5001-exec-4] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 250ms
+2020-12-24 15:34:05.039 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 537ms
+2020-12-24 15:35:57.761 [http-nio-5001-exec-10] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 390ms
+2020-12-24 15:35:59.694 [http-nio-5001-exec-1] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 276ms
+2020-12-24 15:36:02.445 [http-nio-5001-exec-2] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 71ms
+2020-12-24 15:36:10.462 [http-nio-5001-exec-3] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"password":"123456","userName":"abc223344"}
+2020-12-24 15:36:10.830 [http-nio-5001-exec-3] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 628ms
+2020-12-24 15:36:13.485 [http-nio-5001-exec-5] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 205ms
+2020-12-24 15:36:13.744 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 231ms
+2020-12-24 15:36:17.603 [http-nio-5001-exec-6] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 76ms
+2020-12-24 15:36:20.237 [http-nio-5001-exec-8] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"password":"123456","userName":"abc223344"}
+2020-12-24 15:36:20.484 [http-nio-5001-exec-8] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 453ms
+2020-12-24 15:36:30.390 [http-nio-5001-exec-9] "OPTIONS /mock/list/ HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/mock/list/] from: 127.0.0.1 costs: 1ms
+2020-12-24 15:36:30.635 [http-nio-5001-exec-7] "POST /mock/list/ HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/mock/list/] from: 127.0.0.1 costs: 230ms
+2020-12-24 15:36:36.466 [http-nio-5001-exec-10] "POST /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/list] from: 127.0.0.1 costs: 252ms
+2020-12-24 15:37:09.260 [http-nio-5001-exec-1] "OPTIONS /autotest/variable/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/variable/update] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:37:09.509 [http-nio-5001-exec-2] "POST /autotest/variable/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/update] from: 127.0.0.1 costs: 243ms
+2020-12-24 15:37:09.604 [http-nio-5001-exec-3] "POST /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/list] from: 127.0.0.1 costs: 78ms
+2020-12-24 15:37:19.629 [http-nio-5001-exec-5] "POST /autotest/variable/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/update] from: 127.0.0.1 costs: 211ms
+2020-12-24 15:37:19.786 [http-nio-5001-exec-4] "POST /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/list] from: 127.0.0.1 costs: 140ms
+2020-12-24 15:37:21.907 [http-nio-5001-exec-6] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 114ms
+2020-12-24 15:37:22.037 [http-nio-5001-exec-9] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 242ms
+2020-12-24 15:37:22.086 [http-nio-5001-exec-8] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 292ms
+2020-12-24 15:37:25.004 [http-nio-5001-exec-7] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 96ms
+2020-12-24 15:37:25.142 [http-nio-5001-exec-10] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 233ms
+2020-12-24 15:37:25.238 [http-nio-5001-exec-1] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 328ms
+2020-12-24 15:37:29.110 [http-nio-5001-exec-2] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 329ms
+2020-12-24 15:37:32.283 [http-nio-5001-exec-3] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 209ms
+2020-12-24 15:37:34.021 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 270ms
+2020-12-24 15:37:35.673 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 263ms
+2020-12-24 15:37:38.559 [http-nio-5001-exec-6] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 92ms
+2020-12-24 15:37:50.709 [http-nio-5001-exec-9] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":10}
+2020-12-24 15:37:50.942 [http-nio-5001-exec-9] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 469ms
+2020-12-24 15:39:07.822 [SpringContextShutdownHook] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:39:07.829 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-24 15:39:07.856 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-12-24 15:39:35.485 [main] "  " INFO  com.lyn.Application - Starting Application on LyndeMacBook-Pro-2.local with PID 2039 (/Users/lyn/Desktop/mmdz_ceshi/lyntest-server/target/classes started by lyn in /Users/lyn/Desktop/mmdz_ceshi/lyntest-server)
+2020-12-24 15:39:35.489 [main] "  " INFO  com.lyn.Application - The following profiles are active: dev
+2020-12-24 15:39:36.644 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-24 15:39:36.648 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-24 15:39:36.703 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
+2020-12-24 15:39:38.658 [main] "  " INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'commonConfiguration' of type [com.lyn.common.configuration.CommonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-24 15:39:38.877 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5001 (http)
+2020-12-24 15:39:38.884 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:39:38.885 [main] "  " INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-24 15:39:38.885 [main] "  " INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-12-24 15:39:39.015 [main] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-24 15:39:39.016 [main] "  " INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3430 ms
+2020-12-24 15:39:40.067 [main] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:39:41.941 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-24 15:39:42.499 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-24 15:39:42.811 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:39:42.847 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 5001 (http) with context path ''
+2020-12-24 15:39:42.850 [main] "  " INFO  com.lyn.Application - Started Application in 8.485 seconds (JVM running for 9.647)
+2020-12-24 15:39:47.437 [http-nio-5001-exec-1] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-24 15:39:47.438 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-24 15:39:47.450 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-12-24 15:39:48.076 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":10}
+2020-12-24 15:40:39.903 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 52411ms
+2020-12-24 15:42:20.991 [SpringContextShutdownHook] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:42:20.997 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-24 15:42:21.042 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-12-24 15:42:27.932 [main] "  " INFO  com.lyn.Application - Starting Application on LyndeMacBook-Pro-2.local with PID 2046 (/Users/lyn/Desktop/mmdz_ceshi/lyntest-server/target/classes started by lyn in /Users/lyn/Desktop/mmdz_ceshi/lyntest-server)
+2020-12-24 15:42:27.934 [main] "  " INFO  com.lyn.Application - The following profiles are active: dev
+2020-12-24 15:42:28.687 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-24 15:42:28.689 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-24 15:42:28.736 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 0 Redis repository interfaces.
+2020-12-24 15:42:29.102 [main] "  " INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'commonConfiguration' of type [com.lyn.common.configuration.CommonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-24 15:42:29.298 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5001 (http)
+2020-12-24 15:42:29.304 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:42:29.304 [main] "  " INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-24 15:42:29.304 [main] "  " INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-12-24 15:42:29.358 [main] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-24 15:42:29.358 [main] "  " INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1350 ms
+2020-12-24 15:42:30.249 [main] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:42:32.139 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-24 15:42:32.573 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-24 15:42:32.876 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:42:32.908 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 5001 (http) with context path ''
+2020-12-24 15:42:32.911 [main] "  " INFO  com.lyn.Application - Started Application in 5.493 seconds (JVM running for 6.161)
+2020-12-24 15:43:12.311 [http-nio-5001-exec-1] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-24 15:43:12.312 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-24 15:43:12.321 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-12-24 15:43:12.714 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":10}
+2020-12-24 15:43:13.351 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 1002ms
+2020-12-24 15:43:27.997 [SpringContextShutdownHook] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:43:27.998 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-24 15:43:28.005 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-12-24 15:43:43.695 [main] "  " INFO  com.lyn.Application - Starting Application on LyndeMacBook-Pro-2.local with PID 2056 (/Users/lyn/Desktop/mmdz_ceshi/lyntest-server/target/classes started by lyn in /Users/lyn/Desktop/mmdz_ceshi/lyntest-server)
+2020-12-24 15:43:43.699 [main] "  " INFO  com.lyn.Application - The following profiles are active: dev
+2020-12-24 15:43:44.472 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-24 15:43:44.474 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-24 15:43:44.515 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 0 Redis repository interfaces.
+2020-12-24 15:43:46.085 [main] "  " INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'commonConfiguration' of type [com.lyn.common.configuration.CommonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-24 15:43:46.399 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5001 (http)
+2020-12-24 15:43:46.409 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:43:46.410 [main] "  " INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-24 15:43:46.410 [main] "  " INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-12-24 15:43:46.544 [main] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-24 15:43:46.546 [main] "  " INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2762 ms
+2020-12-24 15:43:47.773 [main] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:43:50.738 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-24 15:43:51.308 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-24 15:43:51.771 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:43:51.813 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 5001 (http) with context path ''
+2020-12-24 15:43:51.818 [main] "  " INFO  com.lyn.Application - Started Application in 8.688 seconds (JVM running for 9.351)
+2020-12-24 15:44:00.531 [http-nio-5001-exec-1] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-24 15:44:00.535 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-24 15:44:00.568 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 33 ms
+2020-12-24 15:44:01.476 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":10}
+2020-12-24 15:44:44.300 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 43653ms
+2020-12-24 15:46:34.032 [SpringContextShutdownHook] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:46:34.037 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-24 15:46:34.055 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-12-24 15:46:40.608 [main] "  " INFO  com.lyn.Application - Starting Application on LyndeMacBook-Pro-2.local with PID 2083 (/Users/lyn/Desktop/mmdz_ceshi/lyntest-server/target/classes started by lyn in /Users/lyn/Desktop/mmdz_ceshi/lyntest-server)
+2020-12-24 15:46:40.611 [main] "  " INFO  com.lyn.Application - The following profiles are active: dev
+2020-12-24 15:46:41.378 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-24 15:46:41.384 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-24 15:46:41.476 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74ms. Found 0 Redis repository interfaces.
+2020-12-24 15:46:42.113 [main] "  " INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'commonConfiguration' of type [com.lyn.common.configuration.CommonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-24 15:46:42.685 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5001 (http)
+2020-12-24 15:46:42.696 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:46:42.696 [main] "  " INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-24 15:46:42.697 [main] "  " INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-12-24 15:46:42.836 [main] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-24 15:46:42.837 [main] "  " INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2135 ms
+2020-12-24 15:46:45.287 [main] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 15:46:47.284 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-24 15:46:47.727 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-24 15:46:48.057 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5001"]
+2020-12-24 15:46:48.095 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 5001 (http) with context path ''
+2020-12-24 15:46:48.098 [main] "  " INFO  com.lyn.Application - Started Application in 8.048 seconds (JVM running for 8.796)
+2020-12-24 15:48:47.116 [http-nio-5001-exec-1] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-24 15:48:47.118 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-24 15:48:47.148 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 29 ms
+2020-12-24 15:48:47.616 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":10}
+2020-12-24 15:48:48.379 [http-nio-5001-exec-1] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 1191ms
+2020-12-24 15:49:24.994 [http-nio-5001-exec-2] "OPTIONS /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/category/list] from: 127.0.0.1 costs: 21ms
+2020-12-24 15:49:24.994 [http-nio-5001-exec-3] "OPTIONS /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/list] from: 127.0.0.1 costs: 20ms
+2020-12-24 15:49:24.994 [http-nio-5001-exec-4] "OPTIONS /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/creator] from: 127.0.0.1 costs: 20ms
+2020-12-24 15:49:25.294 [http-nio-5001-exec-7] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 225ms
+2020-12-24 15:49:25.310 [http-nio-5001-exec-5] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 241ms
+2020-12-24 15:49:25.693 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 624ms
+2020-12-24 15:49:27.475 [http-nio-5001-exec-8] "OPTIONS /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/variable/list] from: 127.0.0.1 costs: 1ms
+2020-12-24 15:49:27.639 [http-nio-5001-exec-9] "POST /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/list] from: 127.0.0.1 costs: 158ms
+2020-12-24 15:49:52.977 [http-nio-5001-exec-10] "POST /autotest/variable/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/update] from: 127.0.0.1 costs: 369ms
+2020-12-24 15:49:53.115 [http-nio-5001-exec-1] "POST /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/list] from: 127.0.0.1 costs: 123ms
+2020-12-24 15:50:04.149 [http-nio-5001-exec-4] "POST /autotest/variable/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/update] from: 127.0.0.1 costs: 221ms
+2020-12-24 15:50:04.309 [http-nio-5001-exec-3] "POST /autotest/variable/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/variable/list] from: 127.0.0.1 costs: 91ms
+2020-12-24 15:50:17.845 [http-nio-5001-exec-2] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 335ms
+2020-12-24 15:50:20.244 [http-nio-5001-exec-7] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 229ms
+2020-12-24 15:50:21.176 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 220ms
+2020-12-24 15:50:23.266 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 299ms
+2020-12-24 15:50:28.624 [http-nio-5001-exec-10] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 78ms
+2020-12-24 15:50:39.120 [http-nio-5001-exec-1] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 243ms
+2020-12-24 15:50:41.965 [http-nio-5001-exec-4] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 72ms
+2020-12-24 15:50:51.294 [http-nio-5001-exec-3] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":10}
+2020-12-24 15:50:51.833 [http-nio-5001-exec-3] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 809ms
+2020-12-24 15:50:53.951 [http-nio-5001-exec-2] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 204ms
+2020-12-24 15:50:54.193 [http-nio-5001-exec-7] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 209ms
+2020-12-24 15:51:01.659 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 218ms
+2020-12-24 15:51:07.435 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 255ms
+2020-12-24 15:51:15.103 [http-nio-5001-exec-9] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 68ms
+2020-12-24 15:51:24.491 [http-nio-5001-exec-8] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 15:51:24.832 [http-nio-5001-exec-8] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 559ms
+2020-12-24 15:51:43.799 [http-nio-5001-exec-10] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 177ms
+2020-12-24 15:51:44.033 [http-nio-5001-exec-1] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 194ms
+2020-12-24 15:51:59.572 [http-nio-5001-exec-4] "OPTIONS /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/list] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:51:59.839 [http-nio-5001-exec-3] "POST /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/list] from: 127.0.0.1 costs: 262ms
+2020-12-24 15:52:09.108 [http-nio-5001-exec-2] "POST /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/list] from: 127.0.0.1 costs: 203ms
+2020-12-24 15:53:07.874 [http-nio-5001-exec-7] "POST /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/list] from: 127.0.0.1 costs: 377ms
+2020-12-24 15:54:55.586 [http-nio-5001-exec-6] "POST /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/list] from: 127.0.0.1 costs: 432ms
+2020-12-24 15:54:59.133 [http-nio-5001-exec-9] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 99ms
+2020-12-24 15:54:59.142 [http-nio-5001-exec-1] "OPTIONS /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 1ms
+2020-12-24 15:54:59.142 [http-nio-5001-exec-10] "OPTIONS /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/4] from: 127.0.0.1 costs: 1ms
+2020-12-24 15:54:59.304 [http-nio-5001-exec-8] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 215ms
+2020-12-24 15:54:59.504 [http-nio-5001-exec-4] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 343ms
+2020-12-24 15:54:59.504 [http-nio-5001-exec-3] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 343ms
+2020-12-24 15:54:59.816 [http-nio-5001-exec-2] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 232ms
+2020-12-24 15:55:00.130 [http-nio-5001-exec-7] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 208ms
+2020-12-24 15:55:20.964 [http-nio-5001-exec-5] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 135ms
+2020-12-24 15:55:23.453 [http-nio-5001-exec-6] "OPTIONS /autotest/collection/report/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/list] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:55:24.235 [http-nio-5001-exec-10] "POST /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/list] from: 127.0.0.1 costs: 336ms
+2020-12-24 15:55:24.286 [http-nio-5001-exec-9] "POST /autotest/collection/report/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/report/list] from: 127.0.0.1 costs: 828ms
+2020-12-24 15:55:24.661 [http-nio-5001-exec-1] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 46ms
+2020-12-24 15:55:24.763 [http-nio-5001-exec-8] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 148ms
+2020-12-24 15:55:24.892 [http-nio-5001-exec-3] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 276ms
+2020-12-24 15:55:30.202 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 259ms
+2020-12-24 15:55:34.660 [http-nio-5001-exec-2] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 79ms
+2020-12-24 15:55:46.199 [http-nio-5001-exec-7] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 15:55:46.783 [http-nio-5001-exec-7] "POST /autotest/http/execute HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/execute] from: 127.0.0.1 costs: 1036ms
+2020-12-24 15:55:51.509 [http-nio-5001-exec-5] "OPTIONS /autotest/http/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/create] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:55:51.835 [http-nio-5001-exec-6] "POST /autotest/http/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/create] from: 127.0.0.1 costs: 237ms
+2020-12-24 15:55:52.072 [http-nio-5001-exec-10] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 202ms
+2020-12-24 15:55:59.701 [http-nio-5001-exec-9] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 69ms
+2020-12-24 15:56:06.892 [http-nio-5001-exec-8] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 165ms
+2020-12-24 15:56:07.168 [http-nio-5001-exec-3] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 247ms
+2020-12-24 15:56:12.367 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 242ms
+2020-12-24 15:56:14.494 [http-nio-5001-exec-2] "OPTIONS /autotest/collection/case/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/case/create] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:56:14.742 [http-nio-5001-exec-7] "POST /autotest/collection/case/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/case/create] from: 127.0.0.1 costs: 241ms
+2020-12-24 15:56:15.013 [http-nio-5001-exec-5] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 250ms
+2020-12-24 15:56:20.325 [http-nio-5001-exec-6] "OPTIONS /autotest/collection/case/delete HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/case/delete] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:56:20.539 [http-nio-5001-exec-10] "POST /autotest/collection/case/delete HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/case/delete] from: 127.0.0.1 costs: 210ms
+2020-12-24 15:56:20.767 [http-nio-5001-exec-9] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 209ms
+2020-12-24 15:56:21.244 [http-nio-5001-exec-1] "POST /autotest/collection/case/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/case/create] from: 127.0.0.1 costs: 202ms
+2020-12-24 15:56:21.455 [http-nio-5001-exec-8] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 195ms
+2020-12-24 15:56:25.030 [http-nio-5001-exec-3] "OPTIONS /autotest/collection/position HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/position] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:56:25.387 [http-nio-5001-exec-4] "POST /autotest/collection/position HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/position] from: 127.0.0.1 costs: 338ms
+2020-12-24 15:56:33.162 [http-nio-5001-exec-5] "POST /autotest/collection/position HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/position] from: 127.0.0.1 costs: 307ms
+2020-12-24 15:56:36.263 [http-nio-5001-exec-6] "OPTIONS /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 1ms
+2020-12-24 15:56:36.430 [http-nio-5001-exec-10] "POST /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 90ms
+2020-12-24 15:56:36.908 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"name":"测试分类","sort":9999}
+2020-12-24 15:56:37.121 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"b7390e6eed06451daa8c53201c77fd6c","name":"测试分类newName"}
+2020-12-24 15:56:37.308 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"b7390e6eed06451daa8c53201c77fd6c"}
+2020-12-24 15:56:37.640 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 15:56:37.996 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 15:56:38.130 [http-nio-5001-exec-9] "OPTIONS /autotest/collection/report/4_1608796596344 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/4_1608796596344] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:56:38.300 [http-nio-5001-exec-1] "GET /autotest/collection/report/4_1608796596344 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608796596344] from: 127.0.0.1 costs: 166ms
+2020-12-24 15:56:38.528 [http-nio-5001-exec-8] "  " INFO  com.lyn.module.message.WsHandlerImpl - a new connection opened，current online count：1
+2020-12-24 15:57:37.003 [http-nio-5001-exec-3] "  " INFO  com.lyn.module.message.WsHandlerImpl - a connection closed，current online count：0
+2020-12-24 15:57:37.684 [http-nio-5001-exec-4] "GET /autotest/collection/report/4_1608796596344 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608796596344] from: 127.0.0.1 costs: 394ms
+2020-12-24 15:57:41.645 [http-nio-5001-exec-2] "GET /autotest/collection/report/4_1608796596344 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608796596344] from: 127.0.0.1 costs: 194ms
+2020-12-24 15:57:55.654 [http-nio-5001-exec-7] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 73ms
+2020-12-24 15:58:04.999 [http-nio-5001-exec-5] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 177ms
+2020-12-24 15:58:05.321 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 277ms
+2020-12-24 15:58:11.498 [http-nio-5001-exec-10] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 65ms
+2020-12-24 15:58:11.598 [http-nio-5001-exec-9] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 166ms
+2020-12-24 15:58:11.653 [http-nio-5001-exec-1] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 215ms
+2020-12-24 15:58:11.674 [http-nio-5001-exec-8] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 235ms
+2020-12-24 15:58:11.951 [http-nio-5001-exec-3] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 201ms
+2020-12-24 15:58:12.242 [http-nio-5001-exec-4] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 152ms
+2020-12-24 15:58:19.312 [http-nio-5001-exec-2] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 73ms
+2020-12-24 15:58:27.918 [http-nio-5001-exec-7] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 167ms
+2020-12-24 15:58:28.170 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 221ms
+2020-12-24 15:58:45.992 [http-nio-5001-exec-6] "POST /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 7ms
+2020-12-24 15:58:46.772 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"name":"测试分类","sort":9999}
+2020-12-24 15:58:47.248 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"b7390e6eed06451daa8c53201c77fd6c","name":"测试分类newName"}
+2020-12-24 15:58:47.459 [http-nio-5001-exec-10] "OPTIONS /autotest/collection/report/4_1608796725986 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/4_1608796725986] from: 127.0.0.1 costs: 0ms
+2020-12-24 15:58:47.689 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"b7390e6eed06451daa8c53201c77fd6c"}
+2020-12-24 15:58:47.725 [http-nio-5001-exec-9] "GET /autotest/collection/report/4_1608796725986 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608796725986] from: 127.0.0.1 costs: 259ms
+2020-12-24 15:58:47.754 [http-nio-5001-exec-1] "  " INFO  com.lyn.module.message.WsHandlerImpl - a new connection opened，current online count：1
+2020-12-24 15:58:47.989 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 15:58:48.304 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 15:58:48.565 [http-nio-5001-exec-8] "  " INFO  com.lyn.module.message.WsHandlerImpl - a connection closed，current online count：0
+2020-12-24 15:58:49.836 [http-nio-5001-exec-3] "GET /autotest/collection/report/4_1608796725986 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608796725986] from: 127.0.0.1 costs: 260ms
+2020-12-24 16:12:42.775 [SpringContextShutdownHook] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 16:12:42.782 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-24 16:12:42.804 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-12-24 16:57:17.340 [main] "  " INFO  com.lyn.Application - Starting Application on LyndeMacBook-Pro-2.local with PID 991 (/Users/lyn/Desktop/mmdz_ceshi/lyntest-server/target/classes started by lyn in /Users/lyn/Desktop/mmdz_ceshi/lyntest-server)
+2020-12-24 16:57:17.342 [main] "  " INFO  com.lyn.Application - The following profiles are active: dev
+2020-12-24 16:57:18.195 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-24 16:57:18.198 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-24 16:57:18.252 [main] "  " INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32ms. Found 0 Redis repository interfaces.
+2020-12-24 16:57:18.733 [main] "  " INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'commonConfiguration' of type [com.lyn.common.configuration.CommonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-24 16:57:19.016 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 5001 (http)
+2020-12-24 16:57:19.031 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-5001"]
+2020-12-24 16:57:19.031 [main] "  " INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-24 16:57:19.032 [main] "  " INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-12-24 16:57:19.113 [main] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-24 16:57:19.114 [main] "  " INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1691 ms
+2020-12-24 16:57:20.041 [main] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 16:57:21.782 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-24 16:57:22.597 [main] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-24 16:57:23.217 [main] "  " INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-5001"]
+2020-12-24 16:57:23.256 [main] "  " INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 5001 (http) with context path ''
+2020-12-24 16:57:23.259 [main] "  " INFO  com.lyn.Application - Started Application in 6.632 seconds (JVM running for 7.227)
+2020-12-24 16:59:34.379 [http-nio-5001-exec-1] "  " INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-24 16:59:34.381 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-24 16:59:34.400 [http-nio-5001-exec-1] "  " INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2020-12-24 16:59:34.437 [http-nio-5001-exec-1] "OPTIONS /track/project/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/track/project/list] from: 127.0.0.1 costs: 18ms
+2020-12-24 16:59:35.220 [http-nio-5001-exec-2] "POST /track/project/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/track/project/list] from: 127.0.0.1 costs: 768ms
+2020-12-24 16:59:47.550 [http-nio-5001-exec-3] "OPTIONS /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/list] from: 127.0.0.1 costs: 0ms
+2020-12-24 16:59:48.100 [http-nio-5001-exec-4] "POST /autotest/collection/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/list] from: 127.0.0.1 costs: 545ms
+2020-12-24 16:59:50.504 [http-nio-5001-exec-5] "OPTIONS /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/category/list] from: 127.0.0.1 costs: 0ms
+2020-12-24 16:59:50.504 [http-nio-5001-exec-6] "OPTIONS /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/creator] from: 127.0.0.1 costs: 0ms
+2020-12-24 16:59:50.505 [http-nio-5001-exec-8] "OPTIONS /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/4] from: 127.0.0.1 costs: 0ms
+2020-12-24 16:59:50.505 [http-nio-5001-exec-7] "OPTIONS /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 0ms
+2020-12-24 16:59:50.741 [http-nio-5001-exec-9] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 230ms
+2020-12-24 16:59:50.746 [http-nio-5001-exec-10] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 234ms
+2020-12-24 16:59:50.749 [http-nio-5001-exec-2] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 237ms
+2020-12-24 16:59:50.890 [http-nio-5001-exec-1] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 379ms
+2020-12-24 16:59:50.945 [http-nio-5001-exec-3] "OPTIONS /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/list] from: 127.0.0.1 costs: 1ms
+2020-12-24 16:59:51.250 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 302ms
+2020-12-24 16:59:51.517 [http-nio-5001-exec-5] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 165ms
+2020-12-24 16:59:52.602 [http-nio-5001-exec-6] "OPTIONS /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 1ms
+2020-12-24 16:59:52.818 [http-nio-5001-exec-8] "POST /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 5ms
+2020-12-24 16:59:53.841 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 16:59:54.272 [http-nio-5001-exec-7] "OPTIONS /autotest/collection/report/4_1608800392814 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/4_1608800392814] from: 127.0.0.1 costs: 1ms
+2020-12-24 16:59:54.457 [http-nio-5001-exec-9] "GET /autotest/collection/report/4_1608800392814 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608800392814] from: 127.0.0.1 costs: 180ms
+2020-12-24 16:59:54.510 [http-nio-5001-exec-10] "  " INFO  com.lyn.module.message.WsHandlerImpl - a new connection opened，current online count：1
+2020-12-24 16:59:54.701 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"name":"测试分类","sort":9999}
+2020-12-24 16:59:55.116 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 16:59:55.446 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"861e5a2f7a0b4bc7aa55fdb34f12c11e","name":"测试分类newName"}
+2020-12-24 16:59:55.946 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"861e5a2f7a0b4bc7aa55fdb34f12c11e"}
+2020-12-24 16:59:56.171 [http-nio-5001-exec-2] "  " INFO  com.lyn.module.message.WsHandlerImpl - a connection closed，current online count：0
+2020-12-24 16:59:57.420 [http-nio-5001-exec-1] "GET /autotest/collection/report/4_1608800392814 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608800392814] from: 127.0.0.1 costs: 243ms
+2020-12-24 17:15:27.694 [http-nio-5001-exec-8] "GET /autotest/collection/report/4_1608800392814 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608800392814] from: 127.0.0.1 costs: 827ms
+2020-12-24 17:15:53.950 [http-nio-5001-exec-7] "OPTIONS /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user/login] from: 127.0.0.1 costs: 1ms
+2020-12-24 17:15:54.357 [http-nio-5001-exec-9] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 401ms
+2020-12-24 17:15:58.307 [http-nio-5001-exec-10] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 399ms
+2020-12-24 17:16:01.822 [http-nio-5001-exec-2] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 332ms
+2020-12-24 17:16:10.062 [http-nio-5001-exec-1] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 319ms
+2020-12-24 17:16:23.845 [http-nio-5001-exec-3] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 327ms
+2020-12-24 17:16:27.558 [http-nio-5001-exec-5] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 452ms
+2020-12-24 17:16:30.632 [http-nio-5001-exec-4] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 340ms
+2020-12-24 17:20:15.757 [http-nio-5001-exec-6] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 435ms
+2020-12-24 17:20:15.766 [http-nio-5001-exec-8] "OPTIONS /cms/user/permissions HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user/permissions] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:20:16.088 [http-nio-5001-exec-7] "GET /cms/user/permissions HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/cms/user/permissions] from: 127.0.0.1 costs: 273ms
+2020-12-24 17:20:16.651 [http-nio-5001-exec-9] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 200ms
+2020-12-24 17:20:16.705 [http-nio-5001-exec-10] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 252ms
+2020-12-24 17:20:16.993 [http-nio-5001-exec-2] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 540ms
+2020-12-24 17:22:19.982 [http-nio-5001-exec-4] "POST /cms/user/login HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/user/login] from: 127.0.0.1 costs: 361ms
+2020-12-24 17:22:20.235 [http-nio-5001-exec-6] "GET /cms/user/permissions HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/cms/user/permissions] from: 127.0.0.1 costs: 197ms
+2020-12-24 17:22:20.611 [http-nio-5001-exec-8] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 150ms
+2020-12-24 17:22:20.642 [http-nio-5001-exec-7] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 181ms
+2020-12-24 17:22:20.701 [http-nio-5001-exec-9] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 240ms
+2020-12-24 17:22:30.995 [http-nio-5001-exec-10] "OPTIONS /cms/file HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/file] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:22:31.221 [http-nio-5001-exec-2] "POST /cms/file HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/cms/file] from: 127.0.0.1 costs: 109ms
+2020-12-24 17:22:31.228 [http-nio-5001-exec-5] "OPTIONS /cms/user HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:22:31.597 [http-nio-5001-exec-3] "PUT /cms/user HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [PUT] -> [/cms/user] from: 127.0.0.1 costs: 290ms
+2020-12-24 17:22:31.613 [http-nio-5001-exec-1] "OPTIONS /cms/user/information HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/cms/user/information] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:22:31.718 [http-nio-5001-exec-4] "GET /cms/user/information HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/cms/user/information] from: 127.0.0.1 costs: 62ms
+2020-12-24 17:22:39.712 [http-nio-5001-exec-6] "GET /autotest/collection/report/4_1608800392814 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608800392814] from: 127.0.0.1 costs: 334ms
+2020-12-24 17:23:51.814 [http-nio-5001-exec-10] "GET /autotest/collection/report/4_1608800392814 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608800392814] from: 127.0.0.1 costs: 190ms
+2020-12-24 17:23:53.525 [http-nio-5001-exec-5] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 195ms
+2020-12-24 17:23:53.529 [http-nio-5001-exec-3] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 199ms
+2020-12-24 17:23:53.533 [http-nio-5001-exec-2] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 203ms
+2020-12-24 17:23:53.562 [http-nio-5001-exec-1] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 232ms
+2020-12-24 17:23:53.848 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 202ms
+2020-12-24 17:23:54.118 [http-nio-5001-exec-6] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 148ms
+2020-12-24 17:23:55.159 [http-nio-5001-exec-7] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 194ms
+2020-12-24 17:23:55.159 [http-nio-5001-exec-8] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 194ms
+2020-12-24 17:23:55.227 [http-nio-5001-exec-9] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 262ms
+2020-12-24 17:23:59.343 [http-nio-5001-exec-10] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 194ms
+2020-12-24 17:24:05.679 [http-nio-5001-exec-5] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 204ms
+2020-12-24 17:24:05.679 [http-nio-5001-exec-3] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 204ms
+2020-12-24 17:24:05.695 [http-nio-5001-exec-2] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 219ms
+2020-12-24 17:24:05.728 [http-nio-5001-exec-1] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 252ms
+2020-12-24 17:24:05.979 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 196ms
+2020-12-24 17:24:06.255 [http-nio-5001-exec-6] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 159ms
+2020-12-24 17:24:07.125 [http-nio-5001-exec-7] "POST /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 2ms
+2020-12-24 17:24:08.286 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:24:08.562 [http-nio-5001-exec-8] "OPTIONS /autotest/collection/report/4_1608801847123 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/4_1608801847123] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:24:08.760 [http-nio-5001-exec-9] "GET /autotest/collection/report/4_1608801847123 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608801847123] from: 127.0.0.1 costs: 195ms
+2020-12-24 17:24:08.772 [http-nio-5001-exec-10] "  " INFO  com.lyn.module.message.WsHandlerImpl - a new connection opened，current online count：1
+2020-12-24 17:24:08.821 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"name":"测试分类","sort":9999}
+2020-12-24 17:24:09.321 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:24:09.657 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"1453a9c4d05347bf9797100c68542ee3","name":"测试分类newName"}
+2020-12-24 17:24:09.979 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"1453a9c4d05347bf9797100c68542ee3"}
+2020-12-24 17:24:10.294 [http-nio-5001-exec-5] "  " INFO  com.lyn.module.message.WsHandlerImpl - a connection closed，current online count：0
+2020-12-24 17:24:11.520 [http-nio-5001-exec-3] "GET /autotest/collection/report/4_1608801847123 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608801847123] from: 127.0.0.1 costs: 216ms
+2020-12-24 17:30:16.018 [http-nio-5001-exec-7] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 629ms
+2020-12-24 17:30:18.782 [http-nio-5001-exec-8] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 246ms
+2020-12-24 17:30:37.938 [http-nio-5001-exec-9] "OPTIONS /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/update] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:30:38.297 [http-nio-5001-exec-10] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 273ms
+2020-12-24 17:30:38.716 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 384ms
+2020-12-24 17:30:40.815 [http-nio-5001-exec-3] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 223ms
+2020-12-24 17:30:45.319 [http-nio-5001-exec-4] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 202ms
+2020-12-24 17:30:45.617 [http-nio-5001-exec-2] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 271ms
+2020-12-24 17:31:22.146 [http-nio-5001-exec-1] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 212ms
+2020-12-24 17:31:34.344 [http-nio-5001-exec-6] "POST /autotest/http/update HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/update] from: 127.0.0.1 costs: 362ms
+2020-12-24 17:31:34.929 [http-nio-5001-exec-7] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 552ms
+2020-12-24 17:31:38.760 [http-nio-5001-exec-8] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 403ms
+2020-12-24 17:32:14.179 [http-nio-5001-exec-9] "OPTIONS /autotest/http/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/http/create] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:32:14.836 [http-nio-5001-exec-10] "POST /autotest/http/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/create] from: 127.0.0.1 costs: 535ms
+2020-12-24 17:32:15.220 [http-nio-5001-exec-5] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 351ms
+2020-12-24 17:32:17.502 [http-nio-5001-exec-3] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 388ms
+2020-12-24 17:32:17.502 [http-nio-5001-exec-4] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 388ms
+2020-12-24 17:32:17.616 [http-nio-5001-exec-1] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 501ms
+2020-12-24 17:32:17.619 [http-nio-5001-exec-2] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 504ms
+2020-12-24 17:32:18.188 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 517ms
+2020-12-24 17:32:18.754 [http-nio-5001-exec-8] "POST /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 2ms
+2020-12-24 17:32:19.066 [http-nio-5001-exec-7] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 773ms
+2020-12-24 17:32:20.195 [http-nio-5001-exec-9] "OPTIONS /autotest/collection/report/4_1608802338752 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/4_1608802338752] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:32:20.706 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:32:20.786 [http-nio-5001-exec-10] "GET /autotest/collection/report/4_1608802338752 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608802338752] from: 127.0.0.1 costs: 587ms
+2020-12-24 17:32:20.801 [http-nio-5001-exec-5] "  " INFO  com.lyn.module.message.WsHandlerImpl - a new connection opened，current online count：1
+2020-12-24 17:32:21.478 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"name":"新增测试分类","sort":9999}
+2020-12-24 17:32:22.355 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:32:23.159 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"e4084c2c746747b5b4fd2d25edd70179","name":"测试分类newName"}
+2020-12-24 17:32:23.850 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"e4084c2c746747b5b4fd2d25edd70179"}
+2020-12-24 17:32:24.155 [http-nio-5001-exec-3] "  " INFO  com.lyn.module.message.WsHandlerImpl - a connection closed，current online count：0
+2020-12-24 17:32:25.468 [http-nio-5001-exec-4] "GET /autotest/collection/report/4_1608802338752 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608802338752] from: 127.0.0.1 costs: 303ms
+2020-12-24 17:33:15.968 [http-nio-5001-exec-1] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 472ms
+2020-12-24 17:33:15.968 [http-nio-5001-exec-6] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 472ms
+2020-12-24 17:33:15.968 [http-nio-5001-exec-2] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 472ms
+2020-12-24 17:33:16.105 [http-nio-5001-exec-8] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 609ms
+2020-12-24 17:33:17.088 [http-nio-5001-exec-7] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 936ms
+2020-12-24 17:33:17.832 [http-nio-5001-exec-9] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 653ms
+2020-12-24 17:33:21.677 [http-nio-5001-exec-10] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 445ms
+2020-12-24 17:33:23.151 [http-nio-5001-exec-5] "OPTIONS /autotest/collection/case/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/case/create] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:33:23.689 [http-nio-5001-exec-3] "POST /autotest/collection/case/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/case/create] from: 127.0.0.1 costs: 533ms
+2020-12-24 17:33:24.270 [http-nio-5001-exec-4] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 563ms
+2020-12-24 17:33:26.313 [http-nio-5001-exec-6] "POST /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 1ms
+2020-12-24 17:33:27.731 [http-nio-5001-exec-1] "OPTIONS /autotest/collection/report/4_1608802406312 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/4_1608802406312] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:33:28.218 [http-nio-5001-exec-2] "GET /autotest/collection/report/4_1608802406312 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608802406312] from: 127.0.0.1 costs: 483ms
+2020-12-24 17:33:28.230 [http-nio-5001-exec-8] "  " INFO  com.lyn.module.message.WsHandlerImpl - a new connection opened，current online count：1
+2020-12-24 17:33:28.542 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:33:29.689 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"name":"新增测试分类","sort":9999}
+2020-12-24 17:33:30.434 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:33:31.531 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"885d036fe25e4084ba84e4fe633c1f50","name":"测试分类newName"}
+2020-12-24 17:33:32.592 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"885d036fe25e4084ba84e4fe633c1f50"}
+2020-12-24 17:33:33.335 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:33:33.812 [http-nio-5001-exec-7] "  " INFO  com.lyn.module.message.WsHandlerImpl - a connection closed，current online count：0
+2020-12-24 17:33:35.172 [http-nio-5001-exec-9] "GET /autotest/collection/report/4_1608802406312 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608802406312] from: 127.0.0.1 costs: 352ms
+2020-12-24 17:33:57.860 [http-nio-5001-exec-10] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 201ms
+2020-12-24 17:33:57.861 [http-nio-5001-exec-5] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 202ms
+2020-12-24 17:33:57.884 [http-nio-5001-exec-3] "GET /autotest/collection/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/4] from: 127.0.0.1 costs: 225ms
+2020-12-24 17:33:57.908 [http-nio-5001-exec-4] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 249ms
+2020-12-24 17:33:58.260 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 297ms
+2020-12-24 17:33:58.507 [http-nio-5001-exec-1] "GET /autotest/http/creator HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/http/creator] from: 127.0.0.1 costs: 148ms
+2020-12-24 17:35:18.503 [http-nio-5001-exec-5] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 395ms
+2020-12-24 17:35:23.387 [http-nio-5001-exec-10] "GET /autotest/category/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/category/list] from: 127.0.0.1 costs: 447ms
+2020-12-24 17:36:21.232 [http-nio-5001-exec-3] "POST /autotest/http/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/create] from: 127.0.0.1 costs: 459ms
+2020-12-24 17:36:21.790 [http-nio-5001-exec-4] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 526ms
+2020-12-24 17:36:25.806 [http-nio-5001-exec-6] "POST /autotest/http/list HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/http/list] from: 127.0.0.1 costs: 329ms
+2020-12-24 17:36:27.675 [http-nio-5001-exec-1] "POST /autotest/collection/case/create HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/case/create] from: 127.0.0.1 costs: 272ms
+2020-12-24 17:36:27.942 [http-nio-5001-exec-7] "GET /autotest/collection/pocket/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/pocket/4] from: 127.0.0.1 costs: 249ms
+2020-12-24 17:36:30.245 [http-nio-5001-exec-8] "OPTIONS /autotest/collection/position HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/position] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:36:31.016 [http-nio-5001-exec-9] "POST /autotest/collection/position HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/position] from: 127.0.0.1 costs: 767ms
+2020-12-24 17:36:31.363 [http-nio-5001-exec-2] "POST /autotest/collection/execute/4 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [POST] -> [/autotest/collection/execute/4] from: 127.0.0.1 costs: 1ms
+2020-12-24 17:36:32.816 [http-nio-5001-exec-5] "OPTIONS /autotest/collection/report/4_1608802591362 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [OPTIONS] -> [/autotest/collection/report/4_1608802591362] from: 127.0.0.1 costs: 0ms
+2020-12-24 17:36:33.138 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:36:33.195 [http-nio-5001-exec-10] "GET /autotest/collection/report/4_1608802591362 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608802591362] from: 127.0.0.1 costs: 376ms
+2020-12-24 17:36:33.205 [http-nio-5001-exec-3] "  " INFO  com.lyn.module.message.WsHandlerImpl - a new connection opened，current online count：1
+2020-12-24 17:36:34.111 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"name":"新增测试分类","sort":9999}
+2020-12-24 17:36:34.721 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:36:35.679 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"db29a3ee47fb4b389bad89df927ac8aa","name":"测试分类newName"}
+2020-12-24 17:36:36.357 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"resort":[{"code":"db29a3ee47fb4b389bad89df927ac8aa","sort":0}]}
+2020-12-24 17:36:37.524 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"code":"db29a3ee47fb4b389bad89df927ac8aa"}
+2020-12-24 17:36:38.580 [threadPoolTaskScheduler-1] "  " INFO  com.lyn.async.ApiRequest - 请求入参为：{"pageNo":1,"pageSize":20}
+2020-12-24 17:36:39.346 [http-nio-5001-exec-4] "  " INFO  com.lyn.module.message.WsHandlerImpl - a connection closed，current online count：0
+2020-12-24 17:36:40.667 [http-nio-5001-exec-6] "GET /autotest/collection/report/4_1608802591362 HTTP/1.1" INFO  com.lyn.common.interceptor.RequestLogInterceptor - [GET] -> [/autotest/collection/report/4_1608802591362] from: 127.0.0.1 costs: 312ms
+2020-12-24 17:37:42.687 [SpringContextShutdownHook] "  " INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-24 17:37:42.688 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-24 17:37:42.693 [SpringContextShutdownHook] "  " INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

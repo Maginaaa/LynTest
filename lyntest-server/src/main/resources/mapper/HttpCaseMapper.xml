@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyn.mapper.autotest.HttpCaseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lyn.model.autotest.HttpCaseDO">
+        <id column="id" property="id" />
+        <result column="creator_name" property="creatorName" />
+        <result column="creator_code" property="creatorCode" />
+        <result column="create_date" property="createDate" />
+        <result column="updater_name" property="updaterName" />
+        <result column="updater_code" property="updaterCode" />
+        <result column="update_date" property="updateDate" />
+        <result column="category" property="category" />
+        <result column="case_name" property="caseName" />
+        <result column="api_url" property="apiUrl" />
+        <result column="api_method" property="apiMethod" />
+        <result column="description" property="description" />
+        <result column="header_value" property="headerValue" />
+        <result column="body_type" property="bodyType" />
+        <result column="body_value" property="bodyValue" />
+        <result column="variable_list" property="variableList" />
+        <result column="expected_list" property="expectedList" />
+    </resultMap>
+
+    <resultMap id="CreaterMap" type="com.lyn.bo.CreatorBO">
+        <result column="creator_name" property="creatorName" />
+        <result column="creator_code" property="creatorCode" />
+    </resultMap>
+
+    <select id="selectCreatorList" resultMap="CreaterMap">
+        SELECT creator_name,creator_code
+        from api_http_case
+        GROUP BY creator_code
+    </select>
+
+</mapper>

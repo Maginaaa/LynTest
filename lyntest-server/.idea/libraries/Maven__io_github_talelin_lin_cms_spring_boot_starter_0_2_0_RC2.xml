@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.github.talelin:lin-cms-spring-boot-starter:0.2.0-RC2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/talelin/lin-cms-spring-boot-starter/0.2.0-RC2/lin-cms-spring-boot-starter-0.2.0-RC2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/talelin/lin-cms-spring-boot-starter/0.2.0-RC2/lin-cms-spring-boot-starter-0.2.0-RC2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/talelin/lin-cms-spring-boot-starter/0.2.0-RC2/lin-cms-spring-boot-starter-0.2.0-RC2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

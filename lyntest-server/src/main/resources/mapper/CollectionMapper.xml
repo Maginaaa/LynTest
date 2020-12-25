@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyn.mapper.autotest.CollectionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lyn.model.autotest.CollectionDO">
+        <id column="id" property="id" />
+        <result column="collection_name" property="collectionName" />
+        <result column="creator_name" property="creatorName" />
+        <result column="creator_code" property="creatorCode" />
+        <result column="push_type" property="pushType" />
+        <result column="push_list" property="pushList" />
+        <result column="description" property="description" />
+        <result column="cron" property="cron" />
+        <result column="timing_switch" property="timingSwitch" />
+    </resultMap>
+
+
+</mapper>

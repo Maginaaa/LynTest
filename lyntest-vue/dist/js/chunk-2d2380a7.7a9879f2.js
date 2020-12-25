@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2380a7"],{fe4f:function(n,e,i){"use strict";i.r(e);var t={route:null,name:null,title:"个人",type:"view",icon:"iconfont icon-tushuguanli",filePath:"view/center/",order:null,inNav:!1};e["default"]=t}}]);

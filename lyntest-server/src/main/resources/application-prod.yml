@@ -1,0 +1,37 @@
+#生产环境配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://yourdatabase:3306/lyntest?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+    #验证连接的有效性
+    test-while-idle: true
+    #获取连接时候验证，会影响性能
+    test-on-borrow: false
+    #在连接归还到连接池时是否测试该连接
+    test-on-return: false
+    validation-query: SELECT 1 FROM DUAL
+    #空闲连接回收的时间间隔，与test-while-idle一起使用，设置5分钟
+    time-between-eviction-runs-millis: 300000
+    #连接池空闲连接的有效时间 ，设置30分钟
+    min-evictable-idle-time-millis: 1800000
+    initial-size: 5
+    #指定连接池中最大的活跃连接数.
+    max-active: 50
+    #指定连接池等待连接返回的最大等待时间，毫秒单位.
+    max-wait: 60000
+    #指定必须保持连接的最小值
+    min-idle: 5
+
+
+# 开启权限拦截
+auth:
+  enabled: true
+
+# 开启请求日志记录
+request-log:
+  enabled: true
+
+
+
