@@ -24,7 +24,9 @@
 平台技术栈为 **SpringBoot + Vue**，前后端分离实现。为方便部署，数据库简化为仅使用MySQL，当然平台也内置了Redis操作类，可根据需要让同学们进行快速的二次迁移。
 
 线上体验地址： [http://81.68.103.109](http://81.68.103.109)
+
 github地址： [https://github.com/Maginaaa/LynTest](https://github.com/Maginaaa/LynTest)
+
 这里默认填写了测试账号，同学们自己部署后才可通过root账户使用"用户及权限管理模块"
 
 #### 部分页面展示
@@ -51,4 +53,4 @@ Case管理
 #### 帮助文档
 使用文档和代码解读会后续在[《简单随风的CSDN博客》](https://jiandansuifeng.blog.csdn.net/)上进行陆续更新。
 更多问题欢迎直接微信联系
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201225154714308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x0MzI2MDMwNDM0,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201225163715553.png)
