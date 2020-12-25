@@ -21,6 +21,7 @@ module.exports = {
       .end()
       .use('vue-markdown-loader')
       .loader('vue-markdown-loader/lib/markdown-compiler')
+
   },
   configureWebpack: {
     resolve: {

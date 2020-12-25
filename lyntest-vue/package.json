@@ -50,6 +50,7 @@
     "babel-plugin-component": "^1.1.1",
     "chalk": "^2.4.2",
     "child_process": "^1.0.2",
+    "compression-webpack-plugin": "^7.1.0",
     "cz-conventional-changelog": "^2.1.0",
     "directory-tree": "^2.2.3",
     "ejs": "^2.6.2",
