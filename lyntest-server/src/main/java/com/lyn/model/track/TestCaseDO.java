@@ -1,6 +1,7 @@
 package com.lyn.model.track;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -15,7 +16,7 @@ import java.util.Date;
  */
 @Data
 @Accessors(chain = true)
-@TableName("case")
+@TableName("`case`")
 public class TestCaseDO {
 
 
@@ -38,6 +39,7 @@ public class TestCaseDO {
     /**
      * 用例名称
      */
+    @TableField("`name`")
     private String name;
 
     /**

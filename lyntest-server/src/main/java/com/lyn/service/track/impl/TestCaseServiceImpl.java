@@ -39,7 +39,7 @@ public class TestCaseServiceImpl extends ServiceImpl<TestCaseMapper, TestCaseDO>
         Page<TestCaseDO> pager = new Page<>(testCaseSearchDTO.getPage(), testCaseSearchDTO.getCount());
         LambdaQueryWrapper<TestCaseDO> wrapper = new QueryWrapper<TestCaseDO>().lambda();
         wrapper.eq(TestCaseDO::getProjectId, testCaseSearchDTO.getProjectId())
-                .in(testCaseSearchDTO.getNodeIds().size() >0, TestCaseDO::getNodeId,testCaseSearchDTO.getNodeIds())
+                .in(testCaseSearchDTO.getNodeIds().size() > 0, TestCaseDO::getNodeId,testCaseSearchDTO.getNodeIds())
                 .like(!testCaseSearchDTO.getCaseName().isEmpty(), TestCaseDO::getName, testCaseSearchDTO.getCaseName())
                 .orderByDesc(TestCaseDO::getId);
         return testCaseMapper.selectPage(pager, wrapper);
