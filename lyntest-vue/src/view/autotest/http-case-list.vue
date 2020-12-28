@@ -5,6 +5,7 @@
       <el-input v-model="search.case_name"
                 placeholder="接口名称"
                 style="width: 150px"
+                clearable
                 @change="searchCaseList" />
       <el-select v-model="search.category"
                  placeholder="分 类"
