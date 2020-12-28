@@ -231,7 +231,7 @@
       </span>
     </el-dialog>
     <el-drawer :visible.sync="drawer_visible" :with-header="false" size="70%">
-      <http-case-edit v-if="drawer_visible" :case-info="case_info" operation-type="2" @drawer-close="drawerClose"></http-case-edit>
+      <http-case-edit v-if="drawer_visible" :case-info="case_info" :operation-type="2" @drawer-close="drawerClose"></http-case-edit>
     </el-drawer>
   </div>
 </template>
@@ -582,9 +582,10 @@ export default {
       this.execute_button_loading = false
       this.$router.push(`/autotest/report-detail/${reportId}`)
     },
-    drawerClose() {
+    async drawerClose() {
       this.drawer_visible = false
-      this.searchCaseList()
+      await this.searchCaseList()
+      await this.refreshCaseChooseType()
     }
   },
 }
