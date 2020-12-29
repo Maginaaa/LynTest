@@ -35,6 +35,11 @@ public class PressureExecute {
     @Autowired
     private PressureReportService pressureReportService;
 
+    /**
+     * 创建缓存线程池
+     */
+    ExecutorService es = Executors.newCachedThreadPool();
+    CompletionService<List<AutoTestResponseVO>> completionService = new ExecutorCompletionService<>(es);
 
     @Async
     public void execute(PressureReportDTO pressureReportDTO, HttpCaseDTO httpCaseDTO) {
@@ -44,9 +49,6 @@ public class PressureExecute {
 
         String msg = "pressure_" + httpCaseDTO.getId();
 
-        // 创建缓存线程池
-        ExecutorService es = Executors.newCachedThreadPool();
-        CompletionService<List<AutoTestResponseVO>> completionService = new ExecutorCompletionService<>(es);
         // 保存回调结果
         List<Future<List<AutoTestResponseVO>>> respList = new ArrayList<>();
         for (int i=0;i<threads;i++){
