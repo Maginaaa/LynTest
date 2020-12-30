@@ -23,7 +23,7 @@ lin:
     qiniuyun:
       access-key:
       secret-key:
-      bucket:
+      bucket: lyntest
 spring:
   servlet:
     multipart:
