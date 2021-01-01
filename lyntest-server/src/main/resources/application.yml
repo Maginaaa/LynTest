@@ -52,3 +52,8 @@ logging:
   file:
     max-history:
   config:
+
+wechat:
+  corpId: 1
+  agentId: 1
+  secret: 1

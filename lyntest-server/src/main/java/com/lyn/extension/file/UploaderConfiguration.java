@@ -20,6 +20,6 @@ public class UploaderConfiguration {
     @Order
     @ConditionalOnMissingBean
     public Uploader uploader(){
-        return new QiniuUploader();
+        return new LocalUploader();
     }
 }

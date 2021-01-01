@@ -53,6 +53,9 @@ public class HttpCaseServiceImpl extends ServiceImpl<HttpCaseMapper, HttpCaseDO>
     @Autowired
     private GlobalVariableMapper globalVariableMapper;
 
+    @Autowired
+    private ApiRequest apiRequest;
+
     @Override
     public IPage<HttpCaseDO> searchHttpCaseList(SearchDTO searchDTO) {
 
@@ -118,7 +121,7 @@ public class HttpCaseServiceImpl extends ServiceImpl<HttpCaseMapper, HttpCaseDO>
         autoTestResponseVO.setUrl(httpCaseDTO.getApiUrl());
         autoTestResponseVO.setRequestText(httpCaseDTO.getBodyValue());
 
-        ResponseBO responseBO = ApiRequest.doHttpRequest(httpCaseDTO);
+        ResponseBO responseBO = apiRequest.doHttpRequest(httpCaseDTO);
         // 请求失败则直接抛错
         if (!responseBO.getSuccess()){
             autoTestResponseVO.setResponseText(responseBO.getMsg());

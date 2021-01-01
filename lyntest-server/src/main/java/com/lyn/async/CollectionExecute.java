@@ -3,6 +3,7 @@ package com.lyn.async;
 import com.alibaba.fastjson.JSON;
 import com.lyn.dto.autotest.CollectionDTO;
 import com.lyn.dto.autotest.HttpCaseDTO;
+import com.lyn.extension.wechat.WeChatPush;
 import com.lyn.model.autotest.CollectionDO;
 import com.lyn.model.autotest.CollectionReportDO;
 import com.lyn.model.autotest.HttpCaseDO;
@@ -21,6 +22,7 @@ import org.springframework.scheduling.support.CronTrigger;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ScheduledFuture;
 
@@ -46,6 +48,9 @@ public class CollectionExecute {
 
     @Autowired
     private ThreadPoolTaskScheduler threadPoolTaskScheduler;
+
+    @Autowired
+    private WeChatPush weChatPush;
 
     private static Map<Integer, ScheduledFuture<?>> futureMap = new HashMap<>();
 
@@ -108,7 +113,20 @@ public class CollectionExecute {
 
         String testIsPass = errorCount==0 ? "通过" : "未通过";
         if ((pushType == 2 && errorCount != 0) || pushType == 3) {
-            // TODO: 推送逻辑
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            // 执行推送
+            String content = "接口测试平台报告 \n";
+            content += "【集合名称】" + collectionReportDO.getCollectionName() + "\n";
+            content += "【测试时间】" + sdf.format(collectionReportDO.getExecuteTime()) + "\n";
+            content += "【测试结果】" + testIsPass + "\n";
+            content += "【执行情况】" + "接口总数:" + (passCount+errorCount) + ", "
+                    + "成功:" + passCount + ","
+                    + "失败:" + errorCount+ "\n";
+            content += "【测试报告】http://ip/#/autotest/report-detail/" + collectionReportDO.getId();
+            // 实际使用，这里应该 for (String userCode: pushList)来推送多人
+            weChatPush.messagePush(content);
+
 
         }
 
@@ -157,7 +175,7 @@ public class CollectionExecute {
         // 定时任务调度线程池
         ScheduledFuture<?> future = threadPoolTaskScheduler.schedule(new MyRunnable(collection.getId()),
                 triggerContext -> new CronTrigger(collection.getCron()).nextExecutionTime(triggerContext));
-        log.info("开始执行测试集合:" + collection.getId());
+        log.info("开始执行测试集合:" + collection.getId() + "执行时间： " + collection.getCron());
         futureMap.put(collection.getId(), future);
     }
 

@@ -11,7 +11,11 @@
         </ve-ring>
       </el-card>
       <el-card class="case-list">
-        <el-switch class="sort-switch" v-model="sort_switch" active-color="#13ce66" inactive-color="#ff4949" @change="dataSort"></el-switch>
+        <el-popover placement="top-start"
+                    trigger="hover"
+                    content="报错接口前置">
+          <el-switch  slot="reference" class="sort-switch" v-model="sort_switch" active-color="#13ce66" inactive-color="#ff4949" @change="dataSort"></el-switch>
+        </el-popover>
         <div style="height: 360px">
           <vue-scroll>
             <div v-for="item in result_list"

@@ -5,6 +5,7 @@ import com.lyn.bo.ResponseBO;
 import com.lyn.dto.autotest.HttpCaseDTO;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.text.SimpleDateFormat;
@@ -20,25 +21,26 @@ import java.util.regex.Pattern;
  * @date 2020/9/11
  */
 @Slf4j
+@Component
 public class ApiRequest {
+
+    OkHttpClient client = new OkHttpClient.Builder()
+            .connectTimeout(AutoTestConfig.connectTimeout, TimeUnit.SECONDS)
+            .writeTimeout(AutoTestConfig.writeTimeout,TimeUnit.SECONDS)
+            .readTimeout(AutoTestConfig.readTimeout, TimeUnit.SECONDS)
+            .build();
 
     /**
      *
      * @param httpCaseDTO 传入完整的case数据
      * @return Response返回结果
      */
-    public static ResponseBO doHttpRequest(HttpCaseDTO httpCaseDTO){
+    public ResponseBO doHttpRequest(HttpCaseDTO httpCaseDTO){
 
         String url = httpCaseDTO.getApiUrl();
 
         // 请求方式: POST/GET
         String apiMethod = httpCaseDTO.getApiMethod();
-
-        OkHttpClient client = new OkHttpClient.Builder()
-                .connectTimeout(AutoTestConfig.connectTimeout, TimeUnit.SECONDS)
-                .writeTimeout(AutoTestConfig.writeTimeout,TimeUnit.SECONDS)
-                .readTimeout(AutoTestConfig.readTimeout, TimeUnit.SECONDS)
-                .build();
 
         Request.Builder builder = new Request.Builder();
 

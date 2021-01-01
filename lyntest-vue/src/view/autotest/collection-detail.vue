@@ -183,7 +183,7 @@
           <el-input placeholder="请输入cron表达式"
                     v-show="collection_info.timing_switch"
                     v-model="collection_info.cron"
-                    clearable
+                    :disabled="true"
                     style="width: 240px;margin-left: 20px">
             <el-button type="primary"
                        icon="el-icon-time"

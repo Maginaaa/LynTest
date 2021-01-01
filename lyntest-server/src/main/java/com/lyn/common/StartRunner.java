@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.lyn.async.CollectionExecute;
 import com.lyn.model.autotest.CollectionDO;
 import com.lyn.service.autotest.CollectionService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -28,6 +29,7 @@ public class StartRunner implements CommandLineRunner {
      */
     @Override
     public void run(String... args) {
+
         // 查询需要开启定时任务的list
         List<CollectionDO> collectionList = collectionService.timingSwitchOpenCollectionIdList();
         collectionList.forEach(e-> collectionExecute.start(e));
