@@ -23,7 +23,7 @@
 
 平台技术栈为 **SpringBoot + Vue**，前后端分离实现。为方便部署，数据库简化为仅使用MySQL，当然平台也内置了Redis操作类，可根据需要让同学们进行快速的二次迁移。
 
-线上体验地址： [http://81.68.103.109](http://81.68.103.109)
+线上体验地址： [http://www.lyntest.com](http://www.lyntest.com)
 
 github地址： [https://github.com/Maginaaa/LynTest](https://github.com/Maginaaa/LynTest)
 
