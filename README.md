@@ -40,7 +40,7 @@ Case管理
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201225152530248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x0MzI2MDMwNDM0,size_16,color_FFFFFF,t_70)
 #### 项目启动
 **后端**：
-1. 数据库初始化：启动MySQL数据库，执行根目录下的`lyntest.sql`文件
+1. 数据库初始化：启动MySQL数据库(请使用5.6版本，高版本请自行修改sql_mode)，执行根目录下的`lyntest.sql`文件
 2. 更改`lyntest/lyntest-server/src/main/resources/application-dev.yml` 内的配置文件
 3. `mvn install`
 4. 直接启动SpringBoot
