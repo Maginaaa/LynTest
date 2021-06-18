@@ -31,7 +31,7 @@
     <select id="selectCreatorList" resultMap="CreaterMap">
         SELECT creator_name,creator_code
         from api_http_case
-        GROUP BY creator_code
+        GROUP BY creator_code,creator_name
     </select>
 
 </mapper>
