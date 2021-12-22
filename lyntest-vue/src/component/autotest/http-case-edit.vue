@@ -189,6 +189,7 @@
 
 <script>
 import VueJsonPretty from 'vue-json-pretty'
+import 'vue-json-pretty/lib/styles.css'
 import Category from '@/model/autotest/category'
 import HttpCase from '@/model/autotest/http-case'
 import AssertionsDetail from '@/component/autotest/assertions-detail'
