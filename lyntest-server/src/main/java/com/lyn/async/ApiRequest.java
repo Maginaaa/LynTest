@@ -8,6 +8,13 @@ import okhttp3.*;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+
+import javax.net.ssl.*;
+import java.security.KeyManagementException;
+import java.security.KeyStore;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -25,6 +32,9 @@ import java.util.regex.Pattern;
 public class ApiRequest {
 
     OkHttpClient client = new OkHttpClient.Builder()
+            // 如需忽略SSL的证书验证，放开以下两行注释
+//            .sslSocketFactory(SSLSocketClient.getSSLSocketFactory(), SSLSocketClient.getX509TrustManager())
+//            .hostnameVerifier(SSLSocketClient.getHostnameVerifier())
             .connectTimeout(AutoTestConfig.connectTimeout, TimeUnit.SECONDS)
             .writeTimeout(AutoTestConfig.writeTimeout,TimeUnit.SECONDS)
             .readTimeout(AutoTestConfig.readTimeout, TimeUnit.SECONDS)
@@ -214,5 +224,12 @@ public class ApiRequest {
             return value;
         }
         return key;
+    }
+
+    private static class TrustAllHostnameVerifier implements HostnameVerifier {
+        @Override
+        public boolean verify(String hostname, SSLSession session) {
+            return true;
+        }
     }
 }
